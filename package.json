@@ -1,7 +1,7 @@
 {
   "name": "anotta",
   "version": "1.0.0",
-  "description": "",
+  "description": "Application for managing sticky notes and archiving them.",
   "main": "index.js",
   "scripts": {
     "electron": "electron .",
@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^7.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tiago188/anotta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tiago188/anotta/issues"
+  },
+  "homepage": "https://github.com/Tiago188/anotta#readme"
 }
