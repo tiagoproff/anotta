@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "electron": "electron .",
+    "jquery-ui": "jquery-ui .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tiago S Oliveira",
   "license": "ISC",
   "dependencies": {
-    "electron": "^7.0.0"
+    "electron": "^7.0.0",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1"
   },
   "devDependencies": {},
   "repository": {

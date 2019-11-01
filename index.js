@@ -8,8 +8,15 @@ app.on('ready', () => {
     const windowMenu = new BrowserWindow({
         webPreferences: {
             nodeIntegration : true
-        };
+        }
     });
 
     windowMenu.loadURL(`file://${__dirname}/wmanager.html`);
 })
+
+
+
+/*
+var tm = new Date(2018, 11, 16).getTime();
+console.log(tm)
+*/
