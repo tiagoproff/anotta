@@ -5,6 +5,11 @@ const {app, BrowserWindow} = electron;
 
 app.on('ready', () => {
     //console.log('A aplicacao foi criada.');
-    const windowMenu = new BrowserWindow({});
+    const windowMenu = new BrowserWindow({
+        webPreferences: {
+            nodeIntegration : true
+        };
+    });
+
     windowMenu.loadURL(`file://${__dirname}/wmanager.html`);
 })
