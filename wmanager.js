@@ -1,9 +1,6 @@
 const $ = jQuery = require('jquery');
 
-require('jquery-ui');
-require('jquery-ui/ui/widgets/mouse');
-require('jquery-ui/ui/widgets/sortable');
-require('jquery-ui/ui/disable-selection');
+require('jquery-ui-dist/jquery-ui');
 
 const notesData = require ('./notes.json');
 var notesWindows = [];
