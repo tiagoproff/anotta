@@ -1,0 +1,16 @@
+#notes { list-style-type: none; margin: 0; padding: 0; }
+#notes li { margin: 3px 0; padding: 0.6em; font-size: 1.4em; min-height: 18px; font-family: "arial"; }
+#notes li span { position: absolute; margin-left: -1.3em; }
+
+#notes .normal {
+    background-color: #d7e632;
+}
+
+#notes .archived {
+    background-color: #555;
+}
+
+.windownote input[type=text] {
+    width: 100%;
+    height: 100%;
+}
