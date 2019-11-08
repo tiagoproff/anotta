@@ -22,11 +22,11 @@ app.on('ready', () => {
 
     ipcMain.on('newNote', (note) => {
         //dialog.showOpenDialog();
-    
+
         const windowNote = new BrowserWindow({
             parent: windowManager,
             //frame: false,
-            width: 340, 
+            width: 340,
             height: 180,
             maximizable: false,
             backgroundColor: '#d7e632',
@@ -35,10 +35,16 @@ app.on('ready', () => {
             }
         });
 
-        windowNote.loadURL(`file://${__dirname}/wnote.html`);
+        windowNote.loadURL(`file://${__dirname}/wnote.html`, {
+            postData: [{
+              type: 'rawData',
+              bytes: Buffer.from('hello=world')
+            }]
+        });
 
+        //windowManager.webContents.send('fillNote', note);
         //windowNote.setBackgroundColor('#d7e632')
-        console.log(note);
+        //webview.loadURL(http://localhost:3000/posturl, { postData: [{ type: 'rawData', bytes: Buffer.from('token=token&redirectTo=redirect_url') }] });
     });
 });
 

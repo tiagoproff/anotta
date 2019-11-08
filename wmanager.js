@@ -14,15 +14,13 @@ $(document).ready(() => {
     const notes = db.addCollection({ indices: ['cod'] }, 'text', 'data', 'type');
     // note that indices can be a single string or an array of strings
 
-    /*
+    
     notes.insert( { cod : 0, text : 'Tanquinho', date: '1577757600000', type: 'normal' } );
     notes.insert( { cod : 2, text : 'Site Adriana Oliveira ( André )', date: '1577757600000', type: 'normal' } );
     notes.insert( { cod : 8, text : 'Game PixiJS', date: '1577757600000', type: 'normal' } );
-    */
+    
 
-    const dbdata = notes.find({'cod': 0});
-
-    console.log(notes, dbdata, 52);
+    //console.log(notes, dbdata);
 
     notesData.forEach( (element, i) => {
         notesWindows.push(`<li class="ui-state-default normal" contenteditable="true">${element.text} ${++i}</li>`);
@@ -34,8 +32,10 @@ $(document).ready(() => {
 
     $('#notes li').each(function(note) {
         $(this).on('dblclick', function(){
-            ipcRenderer.send('newNote', this.id);
-            console.log('Clicked');
+            const dbdata = notes.find({'cod': 0});
+
+            ipcRenderer.send('newNote', dbdata[0]);
+            console.log(note, dbdata[0]);
         });
     });
 });
